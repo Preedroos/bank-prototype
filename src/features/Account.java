@@ -53,4 +53,11 @@ public class Account {
             System.out.println("! Valor Invalido.");
         }
     }
+
+    public void printClient() {
+        System.out.println(" - Conta: " + getNumAccount());
+        System.out.println(" - Agencia: " + getNumAgency());
+        System.out.println(" - Senha: " + getPassword());
+        System.out.println(" - Saldo: R$ " + getBalance());
+    }
 }

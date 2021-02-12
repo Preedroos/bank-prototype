@@ -1,15 +1,17 @@
 package roles;
 
-public class Manager extends Employee{
-    private float subsidy;
+import features.Employee;
+
+public class Manager extends Employee {
+    private String subsidy;
     private double allowance;
 
-    public float getSubsidy() {
+    public String getSubsidy() {
         return subsidy;
     }
 
-    public void setSubsidy(float subsidy) {
-        this.subsidy = subsidy;
+    public void setSubsidy(String subsidy) {
+        this.subsidy = subsidy.replaceAll("%", "");
     }
 
     public double getAllowance() {
@@ -22,13 +24,13 @@ public class Manager extends Employee{
 
     @Override
     public double getSalary() {
-        return super.getSalary() * (1 + getSubsidy()) + getAllowance();
+        return super.getSalary() * Integer.parseInt(getSubsidy()) + getAllowance();
     }
 
     @Override
-    public void print() {
-        super.print();
-        System.out.println(" - Bonificacao : R$ " + super.getSalary() * getSubsidy());
+    public void printEmployee() {
+        super.printEmployee();
+        System.out.println(" - Bonificacao : R$ " + super.getSalary() * Integer.parseInt(getSubsidy()) + "%");
         System.out.println(" - Ajuda de Custo: R$ " + getAllowance());
         System.out.println(" - Salario (TOTAL): R$ " + getSalary());
     }

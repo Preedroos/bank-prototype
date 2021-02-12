@@ -30,4 +30,12 @@ public class Client extends Account {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+
+    @Override
+    public void printClient() {
+        super.printClient();
+        System.out.println(" - Nome: " + getFirstName());
+        System.out.println(" - Sobrenome: " + getLastName());
+        System.out.println(" - CPF: " + getCpf());
+    }
 }

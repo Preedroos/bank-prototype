@@ -1,5 +1,7 @@
 package roles;
 
+import features.Employee;
+
 public class Trainee extends Employee {
     private double foodVouchers;
     private double transportationTicket;
@@ -26,8 +28,8 @@ public class Trainee extends Employee {
     }
 
     @Override
-    public void print() {
-        super.print();
+    public void printEmployee() {
+        super.printEmployee();
         System.out.println(" - Vale Alimentacao: R$ " + getFoodVouchers());
         System.out.println(" - Vale Transporte: R$ " + getTransportationTicket());
         System.out.println(" - Salario (TOTAL): R$ " + getSalary());

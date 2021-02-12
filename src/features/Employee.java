@@ -1,6 +1,6 @@
-package roles;
+package features;
 
-public class Employee {
+public class Employee extends Account {
     private String firstName;
     private String lastName;
     private String cpf;
@@ -65,7 +65,7 @@ public class Employee {
         this.salary = salary;
     }
 
-    public void print() {
+    public void printEmployee() {
         System.out.println(" - Nome: " + getFirstName());
         System.out.println(" - Sobrenome: " + getLastName());
         System.out.println(" - CPF: " + getCpf());
@@ -75,8 +75,8 @@ public class Employee {
         System.out.println(" - Salario (BASE): R$ " + getSalary());
     }
 
-//  OVERLOAD - print()
-    public void print(boolean visitCard) {
+//  OVERLOAD - printEmployee()
+    public void printEmployee(boolean visitCard) {
         System.out.println(" - Nome: " + getFirstName());
         System.out.println(" - Email: " + getEmail());
         System.out.println(" - Telefone: " + getPhone());

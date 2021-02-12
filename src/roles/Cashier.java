@@ -1,8 +1,8 @@
-package features;
+package roles;
 
-import roles.Employee;
+import features.Employee;
 
-public class Cash extends Employee {
+public class Cashier extends Employee {
     private float extraHourAmount;
     private double extraHourIncome;
 
@@ -28,8 +28,8 @@ public class Cash extends Employee {
     }
 
     @Override
-    public void print() {
-        super.print();
+    public void printEmployee() {
+        super.printEmployee();
         System.out.println(" - Horas extras: R$ " + getExtraHourAmount() * getExtraHourIncome());
         System.out.println(" - Salario (TOTAL): R$ " + getSalary());
     }

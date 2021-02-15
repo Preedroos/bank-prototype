@@ -6,6 +6,13 @@ public class Cashier extends Employee {
     private float extraHourAmount;
     private double extraHourIncome;
 
+    public Cashier(String firstName, String lastName, String cpf) {
+        setFirstName(firstName);
+        setLastName(lastName);
+        setCpf(cpf);
+        setAccess(2);
+    }
+
     public float getExtraHourAmount() {
         return extraHourAmount;
     }

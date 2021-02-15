@@ -7,6 +7,13 @@ public class Client extends Account {
     private String lastName;
     private String cpf;
 
+    public Client(String firstName, String lastName, String cpf) {
+        setFirstName(firstName);
+        setLastName(lastName);
+        setCpf(cpf);
+        setAccess(0);
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -32,8 +39,8 @@ public class Client extends Account {
     }
 
     @Override
-    public void printClient() {
-        super.printClient();
+    public void printAccount() {
+        super.printAccount();
         System.out.println(" - Nome: " + getFirstName());
         System.out.println(" - Sobrenome: " + getLastName());
         System.out.println(" - CPF: " + getCpf());

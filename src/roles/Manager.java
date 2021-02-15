@@ -6,6 +6,13 @@ public class Manager extends Employee {
     private String subsidy;
     private double allowance;
 
+    public Manager(String firstName, String lastName, String cpf) {
+        setFirstName(firstName);
+        setLastName(lastName);
+        setCpf(cpf);
+        setAccess(3);
+    }
+
     public String getSubsidy() {
         return subsidy;
     }
@@ -20,6 +27,14 @@ public class Manager extends Employee {
 
     public void setAllowance(double allowance) {
         this.allowance = allowance;
+    }
+
+    public void deleteAccount() {
+
+    }
+
+    public void dismissEmployee() {
+
     }
 
     @Override

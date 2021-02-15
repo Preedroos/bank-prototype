@@ -6,6 +6,13 @@ public class Trainee extends Employee {
     private double foodVouchers;
     private double transportationTicket;
 
+    public Trainee(String firstName, String lastName, String cpf) {
+        setFirstName(firstName);
+        setLastName(lastName);
+        setCpf(cpf);
+        setAccess(1);
+    }
+
     public double getFoodVouchers() {
         return foodVouchers;
     }
@@ -20,6 +27,22 @@ public class Trainee extends Employee {
 
     public void setTransportationTicket(double transportationTicket) {
         this.transportationTicket = transportationTicket;
+    }
+
+    public void archive() {
+//implementação
+    }
+
+    public void coffee() {
+//implementação
+    }
+
+    public void watche() {
+//implementação
+    }
+
+    public void bathroom() {
+//implementação
     }
 
     @Override

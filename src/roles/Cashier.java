@@ -39,5 +39,12 @@ public class Cashier extends Employee {
         super.printEmployee();
         System.out.println(" - Horas extras: R$ " + getExtraHourAmount() * getExtraHourIncome());
         System.out.println(" - Salario (TOTAL): R$ " + getSalary());
+        System.out.println("+--------------------------+");
+    }
+
+    @Override
+    public void printAccount() {
+        super.printEmployee(true);
+        super.printAccount();
     }
 }

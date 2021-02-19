@@ -10,6 +10,8 @@ public class Trainee extends Employee {
         setFirstName(firstName);
         setLastName(lastName);
         setCpf(cpf);
+        setFoodVouchers(1);
+        setTransportationTicket(1);
         setAccess(1);
     }
 
@@ -30,19 +32,43 @@ public class Trainee extends Employee {
     }
 
     public void archive() {
-//implementação
+        System.out.println("furando alguns documentos...");
+        try {
+            Thread.sleep(3000);
+            System.out.println("* Arquivo Feito!");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public void coffee() {
-//implementação
+        System.out.println("colocando po do cafe...");
+        try {
+            Thread.sleep(3000);
+            System.out.println("* Cafe Pronto!");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public void watche() {
-//implementação
+        System.out.println("olhando o relogio...");
+        try {
+            Thread.sleep(3000);
+            System.out.println("* Bora trabaia!");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public void bathroom() {
-//implementação
+        System.out.println("usando o banheiro...");
+        try {
+            Thread.sleep(3000);
+            System.out.println("* Bora trabaia!");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -56,5 +82,12 @@ public class Trainee extends Employee {
         System.out.println(" - Vale Alimentacao: R$ " + getFoodVouchers());
         System.out.println(" - Vale Transporte: R$ " + getTransportationTicket());
         System.out.println(" - Salario (TOTAL): R$ " + getSalary());
+        System.out.println("+--------------------------+");
+    }
+
+    @Override
+    public void printAccount() {
+        super.printEmployee(true);
+        super.printAccount();
     }
 }

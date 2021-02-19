@@ -66,6 +66,7 @@ public class Employee extends Account {
     }
 
     public void printEmployee() {
+        System.out.println("\n+--------------------------+");
         System.out.println(" - Nome: " + getFirstName());
         System.out.println(" - Sobrenome: " + getLastName());
         System.out.println(" - CPF: " + getCpf());
@@ -77,6 +78,7 @@ public class Employee extends Account {
 
 //  OVERLOAD - printEmployee()
     public void printEmployee(boolean visitCard) {
+        System.out.println("\n+--------------------------+");
         System.out.println(" - Nome: " + getFirstName());
         System.out.println(" - Email: " + getEmail());
         System.out.println(" - Telefone: " + getPhone());

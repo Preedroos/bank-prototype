@@ -40,9 +40,10 @@ public class Client extends Account {
 
     @Override
     public void printAccount() {
-        super.printAccount();
+        System.out.println("\n+--------------------------+");
         System.out.println(" - Nome: " + getFirstName());
         System.out.println(" - Sobrenome: " + getLastName());
         System.out.println(" - CPF: " + getCpf());
+        super.printAccount();
     }
 }

@@ -1,18 +1,23 @@
 package features;
 
 public class Account {
-    private static int numAccount=0;
+    private static int cont = 0;
+    private int numAccount;
     private int numAgency;
     private double balance;
     private int access;
 
     public Account() {
-        numAccount++;
+        setNumAccount(++cont);
         this.balance = 0;
     }
 
     public int getNumAccount() {
         return numAccount;
+    }
+
+    public void setNumAccount(int numAccount) {
+        this.numAccount = numAccount;
     }
 
     public int getNumAgency() {
@@ -39,16 +44,26 @@ public class Account {
         this.access = access;
     }
 
-    public void withdraw(double value) {
-//implementação
+    public boolean withdraw(double value) {
+        if (value > 0 && value <= getBalance()) {
+            setBalance(getBalance() - value);
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    public void deposit(double value) {
-//implementação
+    public boolean deposit(double value) {
+        if (value > 0) {
+            setBalance(getBalance() + value);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public void consultBalance() {
-//implementação
+        System.out.println(" - Saldo: R$ " + getBalance());
     }
 
     public void history() {
@@ -59,5 +74,6 @@ public class Account {
         System.out.println(" - Conta: " + getNumAccount());
         System.out.println(" - Agencia: " + getNumAgency());
         System.out.println(" - Saldo: R$ " + getBalance());
+        System.out.println("+--------------------------+");
     }
 }

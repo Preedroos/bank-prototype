@@ -10,7 +10,7 @@ public class Manager extends Employee {
         setFirstName(firstName);
         setLastName(lastName);
         setCpf(cpf);
-        setSubsidy("1");
+        setSubsidy("1%");
         setAllowance(1);
         setAccess(3);
     }
@@ -47,7 +47,7 @@ public class Manager extends Employee {
     @Override
     public void printEmployee() {
         super.printEmployee();
-        System.out.println(" - Bonificacao : R$ " + super.getSalary() * (Double.parseDouble(getSubsidy()) / 100) + "%");
+        System.out.printf(" - Bonificacao (%s) : R$ %f\n", getSubsidy() + "%", super.getSalary() * (Double.parseDouble(getSubsidy()) / 100));
         System.out.println(" - Ajuda de Custo: R$ " + getAllowance());
         System.out.println(" - Salario (TOTAL): R$ " + getSalary());
         System.out.println("+--------------------------+");

@@ -245,14 +245,15 @@ public class Bank {
         reader = new Scanner(System.in);
         System.out.println("\n# { Registro }");
         System.out.print(" + Nome: ");
-        String firstName = reader.nextLine();
+        String firstName = reader.nextLine().toUpperCase();
         System.out.print(" + Sobrenome: ");
-        String lastName = reader.nextLine();
+        String lastName = reader.nextLine().toUpperCase();
         System.out.print(" + CPF: ");
         String cpf = reader.nextLine();
         cpf = cpf.replaceAll("-", "");
         cpf = cpf.replaceAll("\\.", "");
         if (isCPFValid(cpf) && isCPFAvailable(cpf)) {
+            String salary;
             System.out.println("|~~~~~~~~~~~~~~~~~~~~|");
             System.out.println("  0 - Cliente");
             System.out.println("  1 - Estagiário");
@@ -303,7 +304,7 @@ public class Bank {
         if (cpf != null && cpf.length() == 11) {
             return true;
         } else {
-            System.out.println("~ CPF Invalido");
+            System.out.println("~ CPF Invalido!");
             return false;
         }
     }

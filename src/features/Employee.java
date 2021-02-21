@@ -73,7 +73,7 @@ public class Employee extends Account {
         System.out.println(" - Email: " + getEmail());
         System.out.println(" - Telefone: " + getPhone());
         System.out.println(" - Endereco: " + getAddress());
-        System.out.println(" - Salario (BASE): R$ " + getSalary());
+        System.out.println(" - Salario (BASE): R$ " + this.salary);
     }
 
 //  OVERLOAD - printEmployee()

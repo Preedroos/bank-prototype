@@ -10,6 +10,8 @@ public class Cashier extends Employee {
         setFirstName(firstName);
         setLastName(lastName);
         setCpf(cpf);
+        setExtraHourAmount(0);
+        setExtraHourIncome(0);
         setAccess(2);
     }
 
